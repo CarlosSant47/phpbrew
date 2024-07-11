@@ -29,6 +29,7 @@ class Console extends Application
         $this->command('init');
         $this->command('known');
         $this->command('install');
+        $this->command('install-local-version');
         $this->command('list');
         $this->command('use');
         $this->command('switch');

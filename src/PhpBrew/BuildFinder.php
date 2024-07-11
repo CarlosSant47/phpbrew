@@ -41,4 +41,9 @@ class BuildFinder
             return preg_replace('/^php-(?=(\d+\.\d+\.\d+(-dev|((alpha|beta|RC)\d+))?)$)/', '', $name);
         }, self::findInstalledBuilds());
     }
+
+    public static function validatePathVersion($path): bool {
+        $path = $path . DIRECTORY_SEPARATOR . 'bin' . DIRECTORY_SEPARATOR . 'php';
+        return file_exists($path);
+    }
 }
